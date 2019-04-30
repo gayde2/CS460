@@ -196,7 +196,7 @@ def runGUI():
 	[sg.Text('Files tracked:', size=(40, 1))],
 	[sg.Listbox(values=['No Files'], size=(50,6), key='list', select_mode='multiple')],
 	[sg.Button('Add New File', disabled=True, key='newFileButton'), sg.Button('Remove File', disabled=True, key='removeFileButton'),sg.InputText(key="newFileInput", disabled=True), sg.FileBrowse(disabled=True, key="fileBrowser")],
-	[sg.Button('Change Password', disabled=True, key='changePW'), sg.Button('Change Serial Number', disabled=True, key='changeSN')]
+	[sg.Button('Change Password', disabled=True, key='changePW')]
 	
 	]
 	Window = sg.Window('CS460 Project: User Console', auto_size_text=True, resizable=True, default_element_size=(40, 1)).Layout(layout).Finalize()
@@ -221,7 +221,6 @@ def runGUI():
 					Window.FindElement('Submit').Update(button_color =('black', 'cyan'))				
 					Window.FindElement('list').Update(values=fileList)	
 					Window.FindElement('changePW').Update(disabled=False)
-					Window.FindElement('changeSN').Update(disabled=False)
 					Window.FindElement('newFileButton').Update(disabled=False)
 					Window.FindElement('fileBrowser').Update(disabled=False)
 					Window.FindElement('newFileInput').Update(disabled=False)
