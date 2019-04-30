@@ -162,7 +162,6 @@ def connectionHandler(InitialPORT, InitialResponsePORT):
 	global connectionEstablished
 	global adminKey
 	global handlerRunning
-	print("Connection Handler")
 	if(handlerRunning):
 		return 
 	currentPort = 5002
